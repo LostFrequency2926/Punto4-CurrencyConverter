@@ -32,7 +32,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Conversión de monedas"
+        android:text="@string/conversion_de_monedas"
         android:textColor="@color/SecondaryColor"
         android:textSize="20sp" />
 
@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cantidad:"
+            android:text="@string/cant"
             android:textSize="16sp" />
 
         <EditText
@@ -68,13 +68,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Moneda origen:"
+            android:text="@string/source"
             android:textSize="16sp" />
 
         <Spinner
             android:id="@+id/spinnerOrigen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="10dp" />
 
     </LinearLayout>
@@ -89,13 +89,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Moneda destino:"
+            android:text="@string/destiny"
             android:textSize="16sp" />
 
         <Spinner
             android:id="@+id/spinnerDestino"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="10dp" />
 
     </LinearLayout>
@@ -107,7 +107,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/SecondaryColor"
-        android:text="Convertir"
+        android:text="@string/convert"
         android:textSize="18sp" />
 
     <TextView
