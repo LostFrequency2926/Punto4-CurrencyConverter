@@ -2,4 +2,6 @@
     <string name="app_name">Currency Converter</string>
     <string name="title">Currency Converter</string>
     <string name="text_bienvenido">Bienvenido!!!</string>
+    <string name="wrongValue">Por favor ingresa una cantidad valida!!!</string>
+
 </resources>
