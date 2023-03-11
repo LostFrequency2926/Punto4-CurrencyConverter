@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="title">Currency Converter</string>
+    <string name="text_bienvenido">Bienvenido!!!</string>
+</resources>
