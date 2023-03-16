@@ -1,7 +1,9 @@
 package com.danielfmunoz.currencyconverter.ui.main
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.danielfmunoz.currencyconverter.R
 import com.danielfmunoz.currencyconverter.databinding.ActivityMainBinding
 
 
@@ -24,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         mainBinding.btnConvertir.setOnClickListener {
             val cantidadStr = mainBinding.editTextCantidad.text.toString()
             if (cantidadStr.isBlank()) {
-                mainBinding.textViewResultado.text = ""
-                mainBinding.editTextCantidad.error = "Ingresa una cantidad válida"
+                mainBinding.textViewResultado.text = getString(R.string.empty)
+                mainBinding.editTextCantidad.error = getString(R.string.wrongCant)
                 return@setOnClickListener
             }
 
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             val origen = currencies[mainBinding.spinnerOrigen.selectedItemPosition]
             val destino = currencies[mainBinding.spinnerDestino.selectedItemPosition]
 
-            val result = CurrencyConverter.convert(cantidad, origen, destino)
+            val result = CurrencyConverter.convert(this, cantidad, origen, destino)
 
             mainBinding.textViewResultado.text = "$cantidad $origen = $result $destino"
             mainBinding.editTextCantidad.error = null
@@ -62,10 +64,11 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        fun convert(cantidad: Double, origen: String, destino: String): Double {
-            val rate = rates[origen]?.get(destino) ?: throw IllegalArgumentException("Tasas de cambio no encontradas para las monedas especificadas")
+        fun convert(context: Context, cantidad: Double, origen: String, destino: String): Double {
+            val rate = rates[origen]?.get(destino) ?: throw IllegalArgumentException("${context.getString(R.string.notFound)}")
             return cantidad * rate
         }
+
     }
 }
 

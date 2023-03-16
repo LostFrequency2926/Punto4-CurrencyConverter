@@ -2,4 +2,7 @@
     <string name="app_name">Currency Converter</string>
     <string name="title">Currency Converter</string>
     <string name="text_bienvenido">Bienvenido!!!</string>
+    <string name="wrongCant">Ingresa una cantidad válida</string>
+    <string name="empty"> </string>
+    <string name="notFound">Tasas de cambio no encontradas para las monedas especificadas</string>
 </resources>
